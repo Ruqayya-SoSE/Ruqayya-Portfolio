@@ -21,20 +21,38 @@
             z-index: 1000;
             padding-left: 5%;
         }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 23px;
+        }
         
-        .header h1, .header h2 {
+        .header h1, .header .links {
             display: inline-block;
+            text-align: center;
+        }
+
+        .header .links{
+           float: right;
+           margin-right: 10%;
+           margin-top: 2.3%;
+        }
+
+        .header a:hover{
+            opacity: 0.7;
         }
         
-        .header h2 {
-            margin-left: 50%;
-        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1 class="name">Ruqayya Khan</h1>
-        <h2 class="menu">Home &nbsp;|&nbsp; About Me &nbsp;|&nbsp; Contact</h2>
+        <div class="links">
+            <a class="menu" href="index.html">Home</a> &nbsp; | &nbsp;
+            <a class="menu" href="about_me.html">About Me</a> &nbsp; | &nbsp;
+            <a class="menu" href="contact.html">Contact </a>
+        </div>
     </div>
     <div class="main">
         
