@@ -4,70 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruqayya Khan - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         header {
-            background-color: white;
+            background-color: #6A0DAD;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px; /* Adjust width as needed */
+            height: 100vh;
+            flex-direction: column;
+            overflow-y: auto; /* Enable scrolling if needed */
         }
         header h1 {
-            color: #6A0DAD;
-            margin: 0;
+            color: white;
             font-size: 24px;
+            margin: 0;
+        }
+        nav {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center links vertically */
         }
         nav a {
-            color: #6A0DAD;
-            margin: 0 15px;
+            color: white;
+            margin: 10px 0; /* Adjust vertical spacing */
             text-decoration: none;
+            font-size: 16px; /* Adjust font size */
         }
-        #home {
+        main {
+            margin-left: 250px; /* Adjust to accommodate the header width */
+            padding: 20px;
+            flex: 1;
+            background-color: #f5f5fc; /* Adjust background color */
+            overflow-y: auto; /* Enable scrolling if needed */
+        }
+        #home, #about, #contact {
             padding: 50px;
             text-align: left;
-            background-color: #E6E6FA;
-            padding-left: 10%;
             line-height: 1.6;
-            padding-right: 10%;
-            flex: 1;
-        }
-        #about {
-            padding: 50px;
-            text-align: center;
-            flex: 1;
-        }
-        #contact {
-            padding: 50px;
-            text-align: center;
-            flex: 1;
+            width: calc(100% - 250px); /* Adjust to accommodate the header width */
+            max-width: 1200px; /* Example maximum width */
+            margin: 0 auto; /* Center content */
         }
         footer {
             background-color: #4B0082;
+            color: white;
             padding: 20px;
             text-align: center;
-            margin-top: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 250px; /* Adjust to accommodate the header width */
+            position: relative;
+            flex-shrink: 0; /* Prevent footer from shrinking */
         }
         footer p {
-            color: white;
             margin: 0;
         }
         footer a {
             color: white;
             text-decoration: none;
         }
-        h4 {
-            font-weight: lighter;
+        .email-subscription {
+            text-align: left;
+            margin-top: 20px;
+            max-width: 400px; /* Example maximum width */
+            margin: 0 auto; /* Center content */
         }
-        .intro {
-            font-size: 30px;
+        .email-subscription label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: white;
+        }
+        .email-subscription input[type="email"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            width: calc(100% - 100px); /* Adjust to fit your layout */
+            max-width: 300px; /* Example maximum width */
+            margin-bottom: 10px;
+        }
+        .email-subscription button {
+            padding: 8px 12px;
+            background-color: #C9A0DC;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100px;
+        }
+        .fa-brands, .fa-regular {
+            margin-left: 20px; /* Adjust as needed */
         }
     </style>
 </head>
@@ -81,33 +130,48 @@
             <a href="#about">About Me</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="email-subscription">
+            <p style="color: white;">Have a question or want to discuss a project?<br>Send me an email:</p><br><br>
+            <form action="https://formspree.io/f/yourformid" method="POST">
+                <input type="email" id="email" name="email" placeholder="Send us an Email" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="mailto:kruqayya789@gmail.com"><i class="fa-regular fa-envelope">&nbsp;&nbsp;</i>Email</a><br><br>
+                <a href="https://www.instagram.com/ruqayya_khan_2007"><i class="fa-brands fa-instagram">&nbsp;&nbsp;</i>Instagram</a><br><br>
+                <a href="https://www.linkedin.com/in/ruqayya-khan-942baa312/"><i class="fa-brands fa-linkedin-in">&nbsp;&nbsp;</i>LinkedIn</a>
+            </p>
+        </div>
     </header>
 
-    <!-- Body -->
-    <div id="home">
-        <h4>HELLO !</h4>
-        <p class="intro">I am <b>Ruqayya Khan,</b> <br> a WEB DEVELOPER.</p>
-        <h4>I am Ruqayya Khan, a student web developer who is creative and hardworking. I enjoy bringing new ideas to life through my web projects and consistently strive to improve my skills. I've been passionate about creating beautiful responsive websites since a long time and have been working on my skills to create a user-friendly website from 2023.</h4>
-    </div>
+    <!-- Main Content -->
+    <main>
+        <div id="home">
+            <h4>HELLO !</h4>
+            <p class="intro">I am <b>Ruqayya Khan,</b> <br> a WEB DEVELOPER.</p>
+            <h4>I am Ruqayya Khan, a student web developer who is creative and hardworking. I enjoy bringing new ideas to life through my web projects and consistently strive to improve my skills. I've been passionate about creating beautiful responsive websites since a long time and have been working on my skills to create a user-friendly website from 2023.</h4>
+        </div>
 
-    <div id="about">
-        <h2>About Me</h2>
-        <p>I have over 5 years of experience in website development. I specialize in creating dynamic and beautiful web pages. I love coding and am always eager to learn new technologies.</p>
-    </div>
+        <div id="about">
+            <h2>About Me</h2>
+            <p>I'm Ruqayya Khan from DBRA-SoSE, Surajmal Vihar, a passionate web developer dedicated to crafting beautiful, user-friendly websites, currently studying in XII standard. With some experience in the field, I specialize in creating dynamic and responsive web pages that provide a seamless user experience. My journey into web development began with a curiosity for how websites work, which quickly grew into a love for coding and design.
+            <br><br>
+            I have honed my skills in HTML, CSS, JavaScript, React, Python and various web development frameworks. I pride myself on my attention to detail and my ability to turn complex problems into elegant solutions. 
+            <br><br>
+            I believe that great web development is not just about writing code but about understanding the needs of the user and creating an engaging, intuitive interface. When I'm not coding, I enjoy exploring new technologies, learning about user experience design.
+            <br><br>
+            I'm always excited to take on new challenges and collaborate with others to bring innovative ideas to life. Feel free to explore my portfolio and get in touch if you'd like to work together or learn more about my work.
+            <br><br>
+            </p>
+        </div>
 
-    <div id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me via email or follow me on Instagram.</p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Ruqayya Khan</p>
-        <p>
-            <a href="mailto:ruqayya.khan@example.com">Email</a> | 
-            <a href="https://www.instagram.com/ruqayya.khan">Instagram</a>
-        </p>
-    </footer>
+        <div id="contact">
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say hello, feel free to reach out. You can connect with me via email, follow my updates on Instagram, or connect professionally on LinkedIn. I look forward to connecting with you!</p>
+        </div>
+    </main>
 
 </body>
 </html>
