@@ -51,8 +51,9 @@
             text-align: center;
             margin-top: 10%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         footer p {
             color: white;
@@ -85,9 +86,11 @@
             text-align: left;
         }
         .email-subscription {
-            text-align: left;
+            text-align: center;
             margin-top: 20px;
-            margin-right: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .email-subscription label {
             display: block;
@@ -99,10 +102,10 @@
             padding: 8px;
             border: none;
             border-radius: 4px;
-            margin-right: 10px;
-            display: block;
-            width: 250px;
             margin-bottom: 10px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
         }
         .email-subscription button {
             padding: 8px 12px;
@@ -111,11 +114,27 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            display: block;
-            width: 100px;
+            width: 100%;
+            max-width: 150px;
+            box-sizing: border-box;
         }
-        .fa-brands, .fa-regular{
-            margin-left: 100px;
+        .email-subscription p {
+            color: white;
+            margin: 0 0 10px;
+        }
+        .fa-brands, .fa-regular {
+            text-align: left;
+            font-size: 25px;
+            color: white;
+        }
+        .fa-brands:hover {
+            opacity: 0.7;
+        }
+        .fa-regular:hover {
+            opacity: 0.7;
+        }
+        .links {
+            color: black;
         }
     </style>
 </head>
@@ -125,9 +144,9 @@
     <header>
         <h1>Ruqayya Khan</h1>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact</a>
+            <a class="links" href="#home">Home</a> &nbsp;|
+            <a class="links" href="#about">About Me</a>&nbsp;|
+            <a class="links" href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -158,17 +177,19 @@
 
     <!-- Footer -->
     <footer>
-        <p class="footer">
-            <a href="mailto:kruqayya789@gmail.com"><i class="fa-regular fa-envelope" style="color: #ffffff;">&nbsp;&nbsp;</i>Email</a> <br><br>
-            <a href="https://www.instagram.com/ruqayya_khan_2007"><i class="fa-brands fa-instagram" style="color: #ffffff;">&nbsp;&nbsp;</i>Instagram</a> <br><br>
-            <a href="https://www.linkedin.com/in/ruqayya-khan-942baa312/"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;">&nbsp;&nbsp;</i>LinkedIn</a>
-        </p>
         <div class="email-subscription">
-            <p style="color: white;">Have a question or want to discuss a project? <br>Send me an email:</p> <br><br>
+            <p>Have a question or want to discuss a project? <br>Send me an email:</p>
             <form action="https://formspree.io/f/yourformid" method="POST">
+            <br>
                 <input type="email" id="email" name="email" placeholder="Send us an Email" required>
                 <button type="submit">Send</button>
+                <br><br><br>
             </form>
+            <div>
+                <a href="mailto:kruqayya789@gmail.com"><i class="fa-regular fa-envelope"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com/ruqayya_khan_2007"><i class="fa-brands fa-instagram"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/ruqayya-khan-942baa312/"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
         </div>
     </footer>
 
