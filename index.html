@@ -40,11 +40,6 @@
             padding-right: 10%;
             flex: 1;
         }
-        #about {
-            padding: 50px;
-            text-align: center;
-            flex: 1;
-        }
         footer {
             background-color: #4B0082;
             padding: 20px;
@@ -70,14 +65,19 @@
             font-size: 30px;
         }
         #about {
-            padding-left: 10%;
-            padding-right: 10%;
+            padding: 05% 10% 0% 10%;
             text-align: left;
             line-height: 1.6;
+            flex: 1;
+        }
+        #projects {
+            padding: 05% 10% 0% 10%;
+            text-align: left;
+            line-height: 1.6;
+            flex: 1;
         }
         #contact {
-            padding-left: 10%;
-            padding-right: 10%;
+            padding: 05% 10% 0% 10%;
             text-align: left;
             line-height: 1.6;
             flex: 1;
@@ -136,6 +136,9 @@
         .links {
             color: black;
         }
+        a:hover{
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -144,9 +147,10 @@
     <header>
         <h1>Ruqayya Khan</h1>
         <nav>
-            <a class="links" href="#home">Home</a> &nbsp;|
-            <a class="links" href="#about">About Me</a>&nbsp;|
-            <a class="links" href="#contact">Contact</a>
+            <a class="links" href="#home"><u>Home</u></a>
+            <a class="links" href="#about"><u>About Me</u></a>
+            <a class="links" href="#projects"><u>Projects</u></a>
+            <a class="links" href="#contact"><u>Contact</u></a>
         </nav>
     </header>
 
@@ -170,6 +174,15 @@
         </p>
     </div>
 
+    <div id="projects">
+        <h2>Projects</h2>
+        <p>
+            <a href="https://codepen.io/1220064-RUQAYYA-KHAN/pen/LYayGxW">Key-Pressed</a> <br>
+            <a href="https://codepen.io/1220064-RUQAYYA-KHAN/pen/PoLNyLy">Calculator</a> <br>
+            <a href="https://codepen.io/1220064-RUQAYYA-KHAN/pen/JjwMyPz">Progress-Bar</a>
+        </p>
+    </div>
+
     <div id="contact">
         <h2>Contact Me</h2>
         <p>I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say hello, feel free to reach out. You can connect with me via email, follow my updates on Instagram, or connect professionally on LinkedIn. I look forward to connecting with you!</p>
@@ -179,10 +192,10 @@
     <footer>
         <div class="email-subscription">
             <p>Have a question or want to discuss a project? <br>Send me an email:</p>
-            <form action="https://formspree.io/f/yourformid" method="POST">
+            <form action="mailto:kruqayya789@gmail.com" method="post" enctype="text/plain">
             <br>
                 <input type="email" id="email" name="email" placeholder="Send us an Email" required>
-                <button type="submit">Send</button>
+                <button type="submit" name="submit" value="Submit">Send</button>
                 <br><br><br>
             </form>
             <div>
