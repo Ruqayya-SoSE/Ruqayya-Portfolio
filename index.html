@@ -138,6 +138,7 @@
         }
         a:hover{
             opacity: 0.7;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -147,10 +148,10 @@
     <header>
         <h1>Ruqayya Khan</h1>
         <nav>
-            <a class="links" href="#home"><u>Home</u></a>
-            <a class="links" href="#about"><u>About Me</u></a>
-            <a class="links" href="#projects"><u>Projects</u></a>
-            <a class="links" href="#contact"><u>Contact</u></a>
+            <a class="links" href="#home">Home</a>
+            <a class="links" href="#about">About Me</a>
+            <a class="links" href="#projects">Projects</a>
+            <a class="links" href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -198,6 +199,40 @@
                 <button type="submit" name="submit" value="Submit">Send</button>
                 <br><br><br>
             </form>
+
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script>
+                (function() {
+                    emailjs.init('T4I7nan_ToTHDHvhY'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+                })();
+
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Prepare the email parameters
+        var templateParams = {
+            name: name,
+            email: email,
+            message: message
+        };
+
+        // Send the email
+        emailjs.send('service_rk2712', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Email sent successfully!');
+            }, function(error) {
+                console.error('FAILED...', error);
+                alert('Failed to send email.');
+            });
+    });
+            </script>
+
             <div>
                 <a href="mailto:kruqayya789@gmail.com"><i class="fa-regular fa-envelope"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://www.instagram.com/ruqayya_khan_2007"><i class="fa-brands fa-instagram"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
